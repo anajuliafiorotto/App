@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Gerenciador de Tarefas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="inicio">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>Início</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="tarefas">
+        <ion-icon name="list-outline"></ion-icon>
+        <ion-label>Tarefas</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="sobre">
+        <ion-icon name="information-circle"></ion-icon>
+        <ion-label>Sobre</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

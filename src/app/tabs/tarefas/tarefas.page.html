@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>tarefas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let task of tasks">
+      <ion-item (click)="openActions(task)">
+        <ion-label>{{task.name}}</ion-label>
+        <ion-icon slot="start" name="radio-button-off" *ngIf="!task.done"></ion-icon>
+        <ion-icon slot="start" name="checkmark-circle" color="success" *ngIf="task.done"></ion-icon>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option (click)="delete(task)">Excluir</ion-item-option>
+      </ion-item-options>
+      <ion-item-options side="start">
+        <ion-item-option (click)="edit(task)">Editar</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+    <ion-item (click)="showAdd()">
+      <ion-label>Criar nova tarefa</ion-label>
+      <ion-icon slot="start" name="add"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>
